@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+    <div class="container">
+        <form name="calculadora" class="calculadora">
+            <div class="display-area">
+                <input class="display" type="text" name="display" value="" disabled>
+            </div>
+            <div class="linha">
+                <input class="apagar" type="button" value="Limpar" onclick="limparDisplay()">
+                <input class="apagar" type="button" value="X" onclick="apagarUltimo(display.value)">
+            </div>
+            <div class="primeira-linha">
+                <input class="numBtn"  type="button" name="num7" value="7" onclick="addDisplay(num7.value)">
+                <input class="numBtn" type="button" name="num8" value="8" onclick="addDisplay(num8.value)">
+                <input class="numBtn" type="button" name="num9" value="9" onclick="addDisplay(num9.value)">
+                <input class="operadorBtn" type="button" name="divisao" value="/" onclick="addDisplay(divisao.value)">
+            </div>
+            <div class="segunda-linha">
+                <input class="numBtn"  type="button" name="num4" value="4" onclick="addDisplay(num4.value)">
+                <input class="numBtn" type="button" name="num5" value="5" onclick="addDisplay(num5.value)">
+                <input class="numBtn" type="button" name="num6" value="6" onclick="addDisplay(num6.value)">
+                <input class="operadorBtn" type="button" name="multiplicacao" value="*" onclick="addDisplay(multiplicacao.value)">
+            </div>
+            <div class="terceira-linha">
+                <input class="numBtn"  type="button" name="num1" value="1" onclick="addDisplay(num1.value)">
+                <input class="numBtn" type="button" name="num2" value="2" onclick="addDisplay(num2.value)">
+                <input class="numBtn" type="button" name="num3" value="3" onclick="addDisplay(num3.value)">
+                <input class="operadorBtn" type="button" name="subtracao" value="-" onclick="addDisplay(subtracao.value)">
+            </div>
+            <div class="quarta-linha">
+                <input class="numBtn" type="button" name="num0" value="0" onclick="addDisplay(num0.value)">
+                <input class="numBtn" type="button" name="ponto" value="." onclick="addDisplay(ponto.value)">
+                <input class="numBtn" type="button" name="addBtn" value="+" onclick="addDisplay(addBtn.value)">
+                <input class="numBtn igual" type="button" name="igual" value="=" onclick="display.value=eval(display.value)">
+            </div>
+        </form>
+    </div>
+<script>
+    function addDisplay(n){
+        calculadora.display.value += n
+    }
+    function limparDisplay(){
+        calculadora.display.value = ""
+    }
+    function apagarUltimo(n){
+        let numerosArray = n.split('')
+        let removerUltimo = numerosArray.splice(-1, 1)
+        let numerosString = numerosArray.join('')
+        calculadora.display.value = numerosString
+    }
+</script>
+</body>
+</html>

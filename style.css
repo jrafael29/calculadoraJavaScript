@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+}
+
+.container{
+    width: 220px;
+    height: 300px;
+    margin-top: 100px;
+    background-color: rgb(137, 124, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 20px #000;
+    border-radius: 5px;
+}
+
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 180px;
+    height: 245px;
+    /* border: 1px solid rgb(0, 0, 0); */
+}
+
+.display{
+    padding: 10px;
+    width: 100%;
+    font-size: 22px;
+    box-shadow: inset 1px 1px 10px rgb(58, 58, 58);
+    text-align: end;
+}
+
+
+.numBtn,
+.operadorBtn{
+    width: 40px;
+    height: 30px;
+    border: none;
+    font-size: 18px;
+    box-shadow: inset 1px 1px 10px #999;
+}
+.numBtn:hover,
+.operadorBtn:hover,
+.apagar:hover{
+    opacity: .5;
+}
+.igual{
+    background-color: sandybrown;
+}
+
+.primeira-linha,
+.segunda-linha,
+.terceira-linha,
+.quarta-linha{
+    display: flex;
+    gap: 5px;
+}
+
+.apagar{
+    width: 86px;
+    height: 30px;
+    border: none;
+    font-size: 18px;
+    box-shadow: inset 1px 1px 10px #999;
+}
